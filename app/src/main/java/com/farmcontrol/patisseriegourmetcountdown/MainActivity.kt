@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.os.CountDownTimer
 import android.os.Handler
 import android.os.Looper
+import android.view.WindowManager
 import android.widget.Button
 import android.widget.NumberPicker
 import android.widget.TextView
@@ -137,6 +138,7 @@ class MainActivity : AppCompatActivity() {
             startButton.text = "Retomar"
             pauseButton.isEnabled = false
             cancelButton.isEnabled = true
+            window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON) // Desativa a tela sempre ligada
         }
 
         // Ação do botão Cancelar
@@ -158,6 +160,7 @@ class MainActivity : AppCompatActivity() {
             alarmStartTime = 0
             historyList.clear()
             updateHistoryText()
+            window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON) // Desativa a tela sempre ligada
         }
     }
 
@@ -167,6 +170,7 @@ class MainActivity : AppCompatActivity() {
         startButton.isEnabled = false
         pauseButton.isEnabled = true
         cancelButton.isEnabled = true
+        window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON) // Mantém a tela ligada
 
         roundCounter++
         val startTime = timeFormat.format(Date())
@@ -219,5 +223,6 @@ class MainActivity : AppCompatActivity() {
             mediaPlayer.seekTo(0)
         }
         mediaPlayer.release()
+        window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON) // Desativa a tela sempre ligada
     }
 }
