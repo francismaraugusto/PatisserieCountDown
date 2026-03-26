@@ -12,10 +12,18 @@ android {
         applicationId = "com.farmcontrol.patisseriegourmetcountdown"
         minSdk = 25
         targetSdk = 35
-        versionCode = 8
-        versionName = "2.2"
-
+        versionCode = 9
+        versionName = "3"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        create("release") {
+            storeFile = file("keystore/patisserie.jks")  // ajusta o caminho depois de achar o .jks
+            storePassword = "SUA_SENHA"
+            keyAlias = "SEU_ALIAS"
+            keyPassword = "SUA_SENHA_KEY"
+        }
     }
 
     buildTypes {

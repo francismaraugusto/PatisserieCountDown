@@ -14,3 +14,6 @@ app/debug/
 
 # Gradle
 gradle/wrapper/gradle-wrapper.jar
+keystore.properties
+*.jks
+*.keystore
