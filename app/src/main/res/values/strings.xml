@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Patisserie Gourmet Countdown</string>
+    <string name="audio_attribution">Reprodução de alarme</string>
 </resources>

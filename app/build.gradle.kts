@@ -12,8 +12,8 @@ android {
         applicationId = "com.farmcontrol.patisseriegourmetcountdown"
         minSdk = 25
         targetSdk = 35
-        versionCode = 7
-        versionName = "2.1"
+        versionCode = 8
+        versionName = "2.2"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -51,6 +51,9 @@ dependencies {
     implementation(libs.androidx.material3)
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.coordinatorlayout)
+    implementation(libs.androidx.cardview)
+    implementation(libs.material)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

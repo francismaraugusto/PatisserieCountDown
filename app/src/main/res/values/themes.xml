@@ -1,7 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Tema base do aplicativo -->
-    <style name="Theme.PatisserieGourmetCountdown" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="Theme.PatisserieGourmetCountdown" parent="Theme.MaterialComponents.Light.NoActionBar">
 
         <!-- Cor primária (barra superior, botões etc.) -->
         <item name="colorPrimary">@color/purple_500</item>
